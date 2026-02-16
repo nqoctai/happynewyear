@@ -10,10 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Config ---
     const messages = [
-        "Chào Như Quỳnh,",
-        "Năm mới 2026 đã đến rồi! Chúc cậu một năm mới thật rực rỡ và hạnh phúc.",
-        "Chúc cô gái sinh ngày 12/12 luôn xinh đẹp, vui vẻ và gặt hái được nhiều thành công hơn nữa.",
-        "Mỗi ngày trôi qua đều là một niềm vui mới. Happy New Year! ✨"
+        "Năm mới 2026 đến rồi, chúc Quỳnh luôn giữ được nụ cười tươi nhất (cười thân thiện như sticker em hay gửi ấy kkk).",
+        "Anh mong năm nay em sẽ gặp được những người bạn thực sự trân trọng mình, không còn phải buồn vì những chuyện cũ nữa.",
+        "Chúc công chúa của bố mẹ luôn được chiều chuộng, vạn sự hanh thông và lúc nào thấy áp lực quá thì cứ nhắn anh, anh nguyện làm chỗ dựa tinh thần miễn phí cho em cả năm luôn!"
     ];
     let messageIndex = 0;
     let charIndex = 0;
