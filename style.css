@@ -1,0 +1,297 @@
+:root {
+    --primary-color: #ff4d6d;
+    /* Pink */
+    --secondary-color: #ffd700;
+    /* Gold */
+    --bg-color: #1a0b1c;
+    /* Dark Purple */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --text-color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Typography */
+h1,
+h2 {
+    font-family: 'Dancing Script', cursive;
+}
+
+.highlight-name {
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a0b1c 0%, #2d1b33 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease-out;
+}
+
+.intro-content {
+    text-align: center;
+}
+
+.glow-text {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px rgba(255, 77, 109, 0.6);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.sub-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+.pulse-btn {
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 77, 109, 0.5);
+    animation: pulse 1.5s infinite;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.7);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 77, 109, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 77, 109, 0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff4d6d, 0 0 30px #ff4d6d;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de;
+    }
+}
+
+/* Main Content */
+.hidden {
+    display: none;
+}
+
+#fireworks-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-section {
+    margin-bottom: 20px;
+}
+
+.avatar-frame {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffd700, #ff4d6d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.recipient-name {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: var(--secondary-color);
+}
+
+.message-box {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px 0;
+    min-height: 100px;
+    /* Prevent jitter */
+    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: white;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.special-date {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #ff9a9e;
+}
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 20;
+}
+
+.icon-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: white;
+
+    transition: background 0.3s;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .recipient-name {
+        font-size: 2rem;
+    }
+
+    .glow-text {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 20px;
+        width: 85%;
+    }
+
+    .avatar-frame {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 1.8rem;
+    }
+
+    .highlight-name {
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    .recipient-name {
+        font-size: 1.8rem;
+    }
+
+    .message-box {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .pulse-btn {
+        padding: 12px 30px;
+        font-size: 1.2rem;
+    }
+
+    .controls {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .icon-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}

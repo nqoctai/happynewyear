@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year Như Quỳnh</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Quicksand:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Overlay Screen -->
+    <div id="intro-overlay" class="overlay">
+        <div class="intro-content">
+            <h1 class="glow-text">Dành tặng Như Quỳnh</h1>
+            <p class="sub-text">Một món quà nhỏ cho ngày đầu năm...</p>
+            <button id="start-btn" class="pulse-btn">Mở Quà 🎁</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-container" class="hidden">
+        <canvas id="fireworks-canvas"></canvas>
+
+        <div class="content-wrapper">
+            <header>
+                <h1 class="main-title">Happy New Year <br><span class="highlight-name">2026</span></h1>
+            </header>
+
+            <section class="card glass-effect">
+                <div class="profile-section">
+                    <!-- Placeholder for image, or a cute icon -->
+                    <div class="avatar-frame">
+                        <span class="avatar-icon">🌸</span>
+                    </div>
+                </div>
+
+                <h2 class="recipient-name">Gửi Như Quỳnh</h2>
+                <div class="message-box">
+                    <p id="typing-text"></p>
+                    <span class="cursor">|</span>
+                </div>
+
+                <div class="special-date">
+                    <span class="star">✨</span> 12/12 <span class="star">✨</span>
+                </div>
+            </section>
+        </div>
+
+        <div class="controls">
+            <button id="music-btn" class="icon-btn">🎵</button>
+        </div>
+    </main>
+
+    <audio id="bg-music" loop>
+        <!-- Placeholder - User should add their own music file -->
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
